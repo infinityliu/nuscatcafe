@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "6d836e49-e8e5-4bc0-9b39-f704ecf3b855",
+		"name": "nuscatcafe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"housz2\",\r\n    \"email\":\"housz2@hou.com\",\r\n    \"password\":\"12345678\",\r\n    \"isAdmin\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hou@hou.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbuIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"shizheng\",\r\n    \"email\":\"shizheng@hou.com\",\r\n    \"password\":\"123456789\",\r\n    \"isAdmin\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/user/6223851852b4e83e84ad1df4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"user",
+								"6223851852b4e83e84ad1df4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/user/6225b2a5d6aaff7d94238753",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"user",
+								"6225b2a5d6aaff7d94238753"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cat",
+			"item": [
+				{
+					"name": "Create cat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbWluIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hairless\",\r\n    \"age\":4,\r\n    \"gender\":\"male\",\r\n    \"description\":\"Hairless because of annoying Scala 😭\",\r\n    \"location\":\"Computing\",\r\n    \"healthCondition\":\"healthy\",\r\n    \"isAlive\":true,\r\n    \"isSterilized\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/cat/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"cat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all cats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/cat/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"cat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a cat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/cat/622346b952b4e83e84acff9e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"cat",
+								"622346b952b4e83e84acff9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a cat",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbWluIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pip\",\r\n    \"age\":3,\r\n    \"gender\":\"female\",\r\n    \"description\":\"The Rare Fellow\",\r\n    \"location\":\"Computing\",\r\n    \"healthCondition\":\"healthy\",\r\n    \"isAlive\":true,\r\n    \"isSterilized\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/cat/6224314d52b4e83e84ad463d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"cat",
+								"6224314d52b4e83e84ad463d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a cat",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbWluIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/cat/6224314d52b4e83e84ad463d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"cat",
+								"6224314d52b4e83e84ad463d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/blog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get blog by blog id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/blog/62242a0952b4e83e84ad425d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								"62242a0952b4e83e84ad425d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get blog by cat id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/blog/cat/622348c352b4e83e84ad00ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								"cat",
+								"622348c352b4e83e84ad00ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get blog by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbWluIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/blog/user/6214b87352b4e83e84a99705",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								"user",
+								"6214b87352b4e83e84a99705"
+							],
+							"query": [
+								{
+									"key": "jw_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXpoZW5nQGhvdS5jb20iLCJpc0FkbWluIjoiZmFsc2UifQ.ZeY8SJjVouoTCxa8zCcukuQDhMwHgh4z/xXS42krl1I",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvdUBob3UuY29tIiwiaXNBZG1pbiI6InRydWUifQ.Gf8Z+08EUA0reczXYHnxmUgJKoaA9WmgiY9Gb8i0oGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"6223851852b4e83e84ad1df4\",\r\n    \"catId\":\"6224317552b4e83e84ad465a\",\r\n    \"title\":\"Hairless cheers up!\",\r\n    \"description\":\"Best Hairless.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/blog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a blog",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvdUBob3UuY29tIiwiaXNBZG1pbiI6InRydWUifQ.Gf8Z+08EUA0reczXYHnxmUgJKoaA9WmgiY9Gb8i0oGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"6223851852b4e83e84ad1df4\",\r\n    \"catId\":\"6224317552b4e83e84ad465a\",\r\n    \"title\":\"Hairless test\",\r\n    \"description\":\"Test Hairless.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/blog/62242d8252b4e83e84ad445a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								"62242d8252b4e83e84ad445a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "jw_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvdUBob3UuY29tIiwiaXNBZG1pbiI6InRydWUifQ.Gf8Z+08EUA0reczXYHnxmUgJKoaA9WmgiY9Gb8i0oGE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/blog/6225d39dd6aaff7d942398b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"blog",
+								"6225d39dd6aaff7d942398b3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
